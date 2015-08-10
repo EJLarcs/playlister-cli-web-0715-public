@@ -23,6 +23,7 @@ describe "LibraryParser" do
     parts = ['Action Bronson', 'Larry Csonka', 'indie']
     song = parser.build_song(parts[0], parts[1], parts[2])
 
+    # binding.pry
     expect(Artist.find_by_name(parts[0])).to eq(song.artist)
     expect(Song.find_by_name(parts[1])).to eq(song)
     expect(Genre.find_by_name(parts[2])).to eq(song.genre)
